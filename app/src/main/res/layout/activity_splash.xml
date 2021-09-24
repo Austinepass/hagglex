@@ -7,8 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#402b75"
-    tools:context=".SplashActivity">
+    tools:context=".ui.SplashActivity">
 
     <ImageView
         android:src="@drawable/logo"
@@ -16,7 +15,7 @@
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:text="HaggleX"
+        android:text="@string/hagglex"
         android:textSize="28sp"
         android:layout_margin="8dp"
         android:textStyle="bold"

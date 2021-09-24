@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="8dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/news_iv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/btc_img"
+        app:shapeAppearanceOverlay="@style/SquareImage" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/news_iv"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/news_iv"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/karla"
+        android:text="@string/dummy_news"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/news_iv"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/news_iv"
+        android:text="@string/dummy_time"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/news_iv"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/time_tv"
+        android:text="@string/category"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/category_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/news_iv"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/category"
+        android:text="@string/defi"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+</RelativeLayout>

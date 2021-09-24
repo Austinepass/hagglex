@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/coin_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/icon_bg"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_arrow_forward" />
+
+    <TextView
+        android:id="@+id/coin_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_alignTop="@id/coin_logo"
+        android:layout_toEndOf="@id/coin_logo"
+        android:backgroundTint="@color/black"
+        android:text="@string/haggle_hag"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/naira_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/coin_name"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/coin_logo"
+        android:text="@string/ngn_380"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/percent_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/naira_value"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/naira_value"
+        android:paddingBottom="2dp"
+        android:text="@string/dummy_increase"
+        android:textColor="#52CB35"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/coin_name"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/chart_ic" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/naira_value"
+        android:layout_margin="16dp"
+        android:background="#F2F2F2" />
+
+</RelativeLayout>
