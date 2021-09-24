@@ -11,14 +11,15 @@
 
     <ImageView
         android:src="@drawable/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_width="80dp"
+        android:layout_height="80dp"/>
 
     <TextView
         android:text="@string/hagglex"
         android:textSize="28sp"
         android:layout_margin="8dp"
         android:textStyle="bold"
+        android:fontFamily="@font/karla_bold"
         android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>

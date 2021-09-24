@@ -2,6 +2,32 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:title=""
+        android:title="@string/home"
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/home_ic"
+        />
+
+    <item
+        android:title="@string/wallet"
+        android:id="@+id/walletFragment"
+        android:icon="@drawable/wallet_ic"
+        />
+
+    <item
+        android:title="@string/exchange"
+        android:id="@+id/exchangeFragment"
+        android:icon="@drawable/ic_otc"
+        />
+
+    <item
+        android:title="@string/cryptosave"
+        android:id="@+id/cryptoSaveFragment"
+        android:icon="@drawable/ic_crypto"
+        />
+
+    <item
+        android:title="@string/more"
+        android:id="@+id/moreFragment"
+        android:icon="@drawable/ic_more"
         />
 </menu>

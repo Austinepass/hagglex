@@ -10,7 +10,7 @@
     <Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:navigationIcon="@drawable/back_btn" />
 
@@ -105,12 +105,13 @@
                 android:textSize="12sp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/login_btn"
+                android:id="@+id/signUp_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="32dp"
                 android:paddingVertical="16dp"
-                android:text="@string/log_in"
+                android:textAllCaps="true"
+                android:text="@string/sign_up"
                 android:textColor="@color/white"
                 app:backgroundTint="@color/gradient_end" />
 

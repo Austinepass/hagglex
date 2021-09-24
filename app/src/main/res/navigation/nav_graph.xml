@@ -25,4 +25,9 @@
         android:name="com.orgustine.hagglex.ui.SuccessFragment"
         android:label="fragment_succes"
         tools:layout="@layout/fragment_succes" />
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.orgustine.hagglex.ui.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
 </navigation>

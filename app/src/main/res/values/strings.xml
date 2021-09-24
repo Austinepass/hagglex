@@ -40,4 +40,10 @@
     <string name="dummy_balance">$***</string>
     <string name="ngn">NGN</string>
     <string name="usd">USD</string>
+    <string name="wallet">Wallet</string>
+    <string name="exchange">Exchange</string>
+    <string name="cryptosave">CryptoSave</string>
+    <string name="more">More</string>
+    <string name="home">Home</string>
+    <string name="sign_up">Sign up</string>
 </resources>

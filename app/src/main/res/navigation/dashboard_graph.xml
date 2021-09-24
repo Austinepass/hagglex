@@ -10,4 +10,24 @@
         android:name="com.orgustine.hagglex.ui.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.orgustine.hagglex.ui.dashboard.WalletFragment"
+        android:label="fragment_wallet"
+        tools:layout="@layout/fragment_wallet" />
+    <fragment
+        android:id="@+id/exchangeFragment"
+        android:name="com.orgustine.hagglex.ui.dashboard.ExchangeFragment"
+        android:label="fragment_exchange"
+        tools:layout="@layout/fragment_exchange" />
+    <fragment
+        android:id="@+id/cryptoSaveFragment"
+        android:name="com.orgustine.hagglex.ui.dashboard.CryptoSaveFragment"
+        android:label="fragment_crypto_save"
+        tools:layout="@layout/fragment_crypto_save" />
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.orgustine.hagglex.ui.dashboard.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" />
 </navigation>
