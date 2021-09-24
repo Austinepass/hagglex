@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gradient_start">#2E1963</color>
     <color name="gradient_end">#402b75</color>
+    <color name="gold">#FFC175</color>
 </resources>

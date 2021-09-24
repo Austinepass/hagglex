@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Hagglex</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">Welcome!</string>
+    <string name="email_address">Email Address</string>
+    <string name="password_hint">Password (Min. 8 characters)</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="log_in">Log in</string>
+    <string name="new_user_create_acct">New user? Create a new account</string>
+    <string name="create_a_new_account">Create a new account</string>
+    <string name="create_a_username">Create a username</string>
+    <string name="phone_number_hint">Enter your phone number</string>
+    <string name="referral_code_optional">Referral code (optional)</string>
+    <string name="privacy_policy">By signing, you agree to HaggleX terms and privacy policy.</string>
 </resources>
