@@ -24,6 +24,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         }
     }
 
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

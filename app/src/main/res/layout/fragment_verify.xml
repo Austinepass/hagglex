@@ -10,7 +10,7 @@
     <Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:navigationIcon="@drawable/back_btn" />
 
@@ -56,7 +56,7 @@
                 />
 
             <EditText
-                android:id="@+id/username_et"
+                android:id="@+id/code_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
@@ -64,6 +64,7 @@
                 android:backgroundTint="@color/black"
                 android:hint="@string/verification_code"
                 android:paddingBottom="20dp"
+                android:inputType="number"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black" />
 

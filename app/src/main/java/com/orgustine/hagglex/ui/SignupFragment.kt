@@ -66,6 +66,8 @@ class SignupFragment : Fragment(R.layout.fragment_signup) {
                         Log.i("Resp", response.toString())
                         response.data!!.register!!.user.username
                         AuthStore.setToken(requireContext(), response.data!!.register!!.token)
+                        findNavController().navigate(R.id.verifyFragment)
+                        findNavController().popBackStack()
                     }
 
                     override fun onFailure(e: ApolloException) {
