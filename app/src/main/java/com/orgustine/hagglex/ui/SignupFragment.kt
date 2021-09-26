@@ -60,7 +60,7 @@ class SignupFragment : Fragment(R.layout.fragment_signup) {
 
                     )
                 )
-                apolloClient.mutate(RegisterMutation(data = userInput)).enqueue(object :
+                apolloClient(requireContext()).mutate(RegisterMutation(data = userInput)).enqueue(object :
                     ApolloCall.Callback<RegisterMutation.Data>() {
                     override fun onResponse(response: Response<RegisterMutation.Data>) {
                         Log.i("Resp", response.toString())

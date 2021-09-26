@@ -39,7 +39,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 binding.emailEt.text.toString().trim(),
                 binding.passwordEt.text.toString().trim()
             )
-            Apollo.apolloClient.mutate(LoginMutation(data = userInput)).enqueue(object :
+            Apollo.apolloClient(requireContext()).mutate(LoginMutation(data = userInput)).enqueue(object :
                 ApolloCall.Callback<LoginMutation.Data>() {
                 override fun onResponse(response: Response<LoginMutation.Data>) {
                     Log.i("Login Resp", response.toString())

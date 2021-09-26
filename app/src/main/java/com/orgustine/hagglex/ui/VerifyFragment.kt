@@ -33,7 +33,7 @@ class VerifyFragment : Fragment(R.layout.fragment_verify) {
                         binding.codeEt.text.toString().trim().toInt()
                     )
                 )
-                Apollo.apolloClient.mutate(VerifyMutation(data = userInput)).enqueue(object :
+                Apollo.apolloClient(requireContext()).mutate(VerifyMutation(data = userInput)).enqueue(object :
                     ApolloCall.Callback<VerifyMutation.Data>() {
                     override fun onResponse(response: Response<VerifyMutation.Data>) {
                         Log.i("Ver Resp", response.toString())
