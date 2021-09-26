@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.orgustine.hagglex"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -60,6 +60,9 @@ dependencies {
     //GraphQL
     implementation("com.apollographql.apollo:apollo-runtime:2.5.5")
     implementation("com.apollographql.apollo:apollo-coroutines-support:2.5.5")
+
+    implementation "com.squareup.okhttp3:okhttp:4.9.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
     compileOnly 'org.jetbrains:annotations:13.0'
     testCompileOnly 'org.jetbrains:annotations:13.0'
 
@@ -69,5 +72,6 @@ dependencies {
     implementation("androidx.security:security-crypto:1.1.0-alpha03")
 
     implementation("io.github.nikartm:image-support:2.0.0")
+    implementation 'com.hbb20:ccp:2.4.7'
 
 }
