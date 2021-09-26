@@ -23,5 +23,26 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onDestroyView()
         _binding = null
     }
+//    mutation Register($data:CreateUserInput){
+//        register(data:$data) {
+//            user {
+//                _id
+//                username
+//                email
+//                phonenumber
+//                phoneNumberDetails {
+//                    phoneNumber
+//                    callingCode
+//                    flag
+//                }
+//                username
+//                active
+//                profile {
+//                    displayName
+//                }
+//            }
+//            token
+//        }
+//    }
 
 }

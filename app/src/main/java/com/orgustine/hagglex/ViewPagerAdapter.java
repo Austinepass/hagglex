@@ -13,7 +13,7 @@ import java.util.List;
 public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.SliderViewHolder> {
     private final List<Integer> sliderItems;
 
-    ViewPagerAdapter(List<Integer> sliderItems) {
+    public ViewPagerAdapter(List<Integer> sliderItems) {
         this.sliderItems = sliderItems;
     }
 
