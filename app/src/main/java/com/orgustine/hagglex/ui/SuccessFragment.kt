@@ -29,7 +29,6 @@ class SuccessFragment : Fragment(R.layout.fragment_succes) {
 
         binding.loginBtn.setOnClickListener {
             findNavController().navigate(R.id.dashboardFragment)
-            findNavController().popBackStack()
         }
     }
 

@@ -7,7 +7,6 @@
     android:background="@color/white"
     tools:context=".ui.DashboardFragment">
 
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/dashboard_nav"
         android:name="androidx.navigation.fragment.NavHostFragment"

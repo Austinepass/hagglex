@@ -1,229 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
-    tools:context=".ui.HomeFragment">
+    android:layout_height="wrap_content">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/home_tb"
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_grad">
+        android:background="@color/white"
+        tools:context=".ui.HomeFragment">
 
-        <RelativeLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/home_tb"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_grad">
 
-            <TextView
-                android:id="@+id/profile_id"
-                android:background="@drawable/circle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="16dp"
-                android:textColor="@color/white"
-                android:textSize="26sp"
-                tools:text="SV" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/title_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginVertical="16dp"
-                android:fontFamily="@font/karla_bold"
-                android:text="@string/hagglex"
-                android:textColor="@color/white"
-                android:textSize="28sp" />
-
-            <ru.nikartm.support.ImageBadgeView
-                android:id="@+id/ibv_icon2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/grey_bg"
-                android:layout_gravity="center"
-                android:layout_alignParentEnd="true"
-                android:layout_margin="16dp"
-                android:padding="8dp"
-                app:ibv_badgeValue="10"
-                app:ibv_badgeTextSize="12sp"
-                app:ibv_fixedBadgeRadius="15dp"
-                app:ibv_badgeTextStyle="bold"
-                app:ibv_badgeTextColor="#ffffff"
-                app:ibv_badgeColor="#F52626"
-                app:ibv_badgeLimitValue="false"
-                android:src="@drawable/notification_ic" />
-
-            <TextView
-                android:id="@+id/portfolio_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/profile_id"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/karla"
-                android:text="@string/total_portfolio_balance"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/currency_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/portfolio_title"
-                android:layout_marginVertical="8dp"
-                android:text="@string/dummy_balance"
-                android:textColor="@color/white"
-                android:textSize="28sp" />
+                <TextView
+                    android:id="@+id/profile_id"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginVertical="16dp"
+                    android:background="@drawable/circle"
+                    android:fontFamily="@font/karla_bold"
+                    android:gravity="center"
+                    android:text="@string/sv"
+                    android:textColor="@color/gradient_end"
+                    android:textSize="18sp" />
 
 
-            <com.google.android.material.switchmaterial.SwitchMaterial
-                android:layout_width="wrap_content"
-                android:id="@+id/currency_switch"
-                android:layout_margin="16dp"
-                android:layout_alignParentEnd="true"
-                android:layout_gravity="center"
-                app:showText="true"
-                android:textSize="12sp"
-                app:thumbTextPadding="16dp"
-                android:textOn="@string/ngn"
-                android:textOff="@string/usd"
-                app:track="@drawable/custom_track"
-                android:thumb="@drawable/custom_thumb"
-                android:layout_below="@id/portfolio_title"
-                android:layout_height="wrap_content"/>
+                <ru.nikartm.support.ImageBadgeView
+                    android:id="@+id/ibv_icon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/grey_bg"
+                    android:padding="8dp"
+                    android:src="@drawable/notification_ic"
+                    app:ibv_badgeColor="#F52626"
+                    app:ibv_badgeLimitValue="false"
+                    app:ibv_badgeTextColor="#ffffff"
+                    app:ibv_badgeTextSize="12sp"
+                    app:ibv_badgeTextStyle="bold"
+                    app:ibv_badgeValue="10"
+                    app:ibv_fixedBadgeRadius="15dp" />
 
-            <TextView
-                android:id="@+id/balance_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginVertical="16dp"
-                android:fontFamily="@font/karla_bold"
-                android:text="@string/hagglex"
-                android:textColor="@color/white"
-                android:textSize="28sp" />
+                <TextView
+                    android:id="@+id/portfolio_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profile_id"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/karla"
+                    android:text="@string/total_portfolio_balance"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
 
-
-        </RelativeLayout>
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/home_vp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/home_tb"
-        />
-
-    <TextView
-        android:id="@+id/market_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/home_vp"
-        android:layout_margin="16dp"
-        android:backgroundTint="@color/black"
-        android:fontFamily="@font/karla_bold"
-        android:text="@string/markets"
-        android:textColor="@color/black"
-        android:textSize="22sp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/market_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/market_tv"
-        android:layout_marginHorizontal="16dp" />
-
-    <View
-        android:id="@+id/mkt_divider"
-        android:layout_width="match_parent"
-        android:layout_height="8dp"
-        android:layout_below="@id/market_list"
-        android:background="#FBFBFB" />
-
-    <TextView
-        android:id="@+id/do_more_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/mkt_divider"
-        android:layout_margin="16dp"
-        android:backgroundTint="@color/black"
-        android:fontFamily="@font/karla_bold"
-        android:text="@string/do_more_with_hagglex"
-        android:textColor="@color/black"
-        android:textSize="22sp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/do_more_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/do_more_tv"
-        android:layout_marginHorizontal="8dp"
-        tools:listitem="@layout/do_more_item_layout" />
-
-    <View
-        android:id="@+id/more_divider"
-        android:layout_width="match_parent"
-        android:layout_height="8dp"
-        android:layout_below="@id/do_more_list"
-        android:background="#FBFBFB" />
-
-    <TextView
-        android:id="@+id/trending_news_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/more_divider"
-        android:layout_margin="16dp"
-        android:backgroundTint="@color/black"
-        android:fontFamily="@font/karla_bold"
-        android:text="@string/trending_crypto_news"
-        android:textColor="@color/black"
-        android:textSize="22sp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/news_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/trending_news_tv"
-        android:layout_marginHorizontal="16dp"
-        tools:listitem="@layout/trending_news_item_layout" />
-
-    <View
-        android:id="@+id/div3"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@id/news_list"
-        android:background="#FBFBFB" />
-
-    <TextView
-        android:id="@+id/view_story_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/div3"
-        android:layout_margin="16dp"
-        android:backgroundTint="@color/black"
-        android:text="@string/view_all_stories"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/div3"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_arrow_forward" />
-
-    <View
-        android:id="@+id/div4"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@id/view_story_tv"
-        android:layout_marginBottom="16dp"
-        android:background="#FBFBFB" />
+                <TextView
+                    android:id="@+id/currency_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/portfolio_title"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/dummy_balance"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
 
 
-</RelativeLayout>
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/currency_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/portfolio_title"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textOff="@string/usd"
+                    android:textOn="@string/ngn"
+                    android:thumb="@drawable/custom_thumb"
+                    app:showText="true"
+                    app:thumbTextPadding="10dp"
+                    app:thumbTint="@color/gold"
+                    app:track="@drawable/custom_track"
+                    app:trackTint="@color/white" />
+
+                <TextView
+                    android:id="@+id/balance_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/hagglex"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/home_vp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_tb" />
+
+        <TextView
+            android:id="@+id/market_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_vp"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/karla_bold"
+            android:text="@string/markets"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/market_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/market_tv"
+            android:layout_marginHorizontal="16dp" />
+
+        <View
+            android:id="@+id/mkt_divider"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_below="@id/market_list"
+            android:background="#FBFBFB" />
+
+        <TextView
+            android:id="@+id/do_more_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mkt_divider"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/karla_bold"
+            android:text="@string/do_more_with_hagglex"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/do_more_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/do_more_tv"
+            android:layout_marginHorizontal="8dp"
+            tools:listitem="@layout/do_more_item_layout" />
+
+        <View
+            android:id="@+id/more_divider"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_below="@id/do_more_list"
+            android:background="#FBFBFB" />
+
+        <TextView
+            android:id="@+id/trending_news_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/more_divider"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/karla_bold"
+            android:text="@string/trending_crypto_news"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/news_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/trending_news_tv"
+            android:layout_marginHorizontal="8dp"
+            tools:listitem="@layout/trending_news_item_layout" />
+
+        <View
+            android:id="@+id/div3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/news_list"
+            android:background="#FBFBFB" />
+
+        <TextView
+            android:id="@+id/view_story_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/div3"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/black"
+            android:text="@string/view_all_stories"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/div3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_arrow_forward" />
+
+        <View
+            android:id="@+id/div4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/view_story_tv"
+            android:layout_marginBottom="16dp"
+            android:background="#FBFBFB" />
+
+    </RelativeLayout>
+</ScrollView>

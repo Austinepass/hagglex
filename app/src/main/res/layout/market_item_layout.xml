@@ -17,34 +17,31 @@
         android:id="@+id/coin_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:layout_alignTop="@id/coin_logo"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
         android:layout_toEndOf="@id/coin_logo"
         android:backgroundTint="@color/black"
         android:text="@string/haggle_hag"
         android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/naira_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/coin_name"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
         android:layout_toEndOf="@id/coin_logo"
         android:text="@string/ngn_380"
-        android:textSize="14sp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/percent_change"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/naira_value"
-        android:layout_marginStart="16dp"
+        android:layout_below="@id/coin_name"
+        android:layout_marginStart="8dp"
         android:layout_toEndOf="@id/naira_value"
-        android:paddingBottom="2dp"
         android:text="@string/dummy_increase"
         android:textColor="#52CB35"
         android:textSize="12sp" />

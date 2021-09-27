@@ -8,6 +8,7 @@
     tools:context=".ui.VerifyFragment">
 
     <Toolbar
+        android:id="@+id/tb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -15,12 +16,14 @@
         android:navigationIcon="@drawable/back_btn" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
+        android:fontFamily="@font/karla_bold"
+        android:gravity="center"
         android:text="@string/verify_your_account"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="29sp"
         android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
@@ -35,38 +38,54 @@
             android:orientation="vertical">
 
             <ImageView
-                android:src="@drawable/tick_icon"
                 android:id="@+id/email_et"
                 android:layout_width="84dp"
                 android:layout_height="84dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="32dp"
-                android:paddingBottom="20dp"
-                />
+                android:src="@drawable/tick_icon" />
 
             <TextView
                 android:id="@+id/password_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="32dp"
-                android:textAlignment="center"
-                android:textSize="18sp"
+                android:layout_marginHorizontal="16dp"
+                android:fontFamily="sans-serif-light"
                 android:text="@string/verify_email_text"
+                android:textAlignment="center"
                 android:textColor="@color/black"
-                />
+                android:textSize="16sp" />
 
-            <EditText
-                android:id="@+id/code_et"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_tf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
-                android:layout_marginTop="16dp"
-                android:backgroundTint="@color/black"
+                android:layout_marginTop="32dp"
                 android:hint="@string/verification_code"
-                android:paddingBottom="20dp"
-                android:inputType="number"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black" />
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="#AB47BC"
+                app:boxStrokeWidthFocused="1dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="6"
+                app:hintTextColor="@color/gradient_start">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/code_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/welcome_tv"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@color/black"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="number"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.button.MaterialButton
@@ -85,26 +104,26 @@
                 android:id="@+id/expire_code_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="32dp"
+                android:layout_marginHorizontal="32dp"
                 android:backgroundTint="@color/black"
                 android:text="@string/expire_code"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/resend_code_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="64dp"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="8dp"
                 android:backgroundTint="@color/black"
+                android:paddingBottom="48dp"
                 android:text="@string/resend_code"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="22sp" />
-
-
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
 
         </LinearLayout>

@@ -1,4 +1,4 @@
-package com.orgustine.hagglex;
+package com.orgustine.hagglex.data;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +7,8 @@ import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.orgustine.hagglex.R;
 
 import java.util.List;
 

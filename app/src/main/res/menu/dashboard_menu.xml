@@ -16,7 +16,7 @@
     <item
         android:title="@string/exchange"
         android:id="@+id/exchangeFragment"
-        android:icon="@drawable/ic_otc"
+        android:icon="@drawable/ic_baseline_swap"
         />
 
     <item
@@ -28,6 +28,6 @@
     <item
         android:title="@string/more"
         android:id="@+id/moreFragment"
-        android:icon="@drawable/ic_more"
+        android:icon="@drawable/ic_moree"
         />
 </menu>

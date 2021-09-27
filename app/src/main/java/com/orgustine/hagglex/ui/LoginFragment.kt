@@ -4,15 +4,18 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.apollographql.apollo.ApolloCall
 import com.apollographql.apollo.api.Response
+import com.apollographql.apollo.coroutines.await
 import com.apollographql.apollo.exception.ApolloException
 import com.orgustine.apollo.LoginMutation
 import com.orgustine.apollo.type.LoginInput
 import com.orgustine.hagglex.R
 import com.orgustine.hagglex.databinding.FragmentLoginBinding
 import com.orgustine.hagglex.network.Apollo
+import com.orgustine.hagglex.network.Apollo.apolloClient
 import com.orgustine.hagglex.util.AuthStore
 
 class LoginFragment : Fragment(R.layout.fragment_login) {
@@ -24,7 +27,8 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         _binding = FragmentLoginBinding.bind(view)
 
         binding.loginBtn.setOnClickListener {
-            findNavController().navigate(R.id.dashboardFragment)
+            //login()
+            if (!validateInput()) findNavController().navigate(R.id.dashboardFragment)
         }
 
         binding.newUserTv.setOnClickListener {
@@ -39,20 +43,32 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 binding.emailEt.text.toString().trim(),
                 binding.passwordEt.text.toString().trim()
             )
-            Apollo.apolloClient(requireContext()).mutate(LoginMutation(data = userInput)).enqueue(object :
-                ApolloCall.Callback<LoginMutation.Data>() {
-                override fun onResponse(response: Response<LoginMutation.Data>) {
+            lifecycleScope.launchWhenResumed {
+                val response = try {
+                    apolloClient(requireContext()).mutate(LoginMutation(userInput)).await()
+                } catch (e: Exception) {
+                    Log.i("Login Resp", e.toString())
+                    null
+                }
+                val login = response?.data?.login
+                if (login == null || response.hasErrors()) {
                     Log.i("Login Resp", response.toString())
-                    AuthStore.setToken(requireContext(), response.data!!.login.token!!)
-                    findNavController().navigate(R.id.verifyFragment)
-                    findNavController().popBackStack()
+                    return@launchWhenResumed
                 }
-
-                override fun onFailure(e: ApolloException) {
-                    Log.i("Login ERR", e.toString())
-                }
-            })
-        }
+//            Apollo.apolloClient.mutate(LoginMutation(data = userInput)).enqueue(object :
+//                ApolloCall.Callback<LoginMutation.Data>() {
+//                override fun onResponse(response: Response<LoginMutation.Data>) {
+//                    Log.i("Login Resp", response.toString())
+//                    AuthStore.setToken(requireContext(), response.data!!.login.token!!)
+//                    findNavController().navigate(R.id.dashboardFragment)
+//                    findNavController().popBackStack()
+//                }
+//
+//                override fun onFailure(e: ApolloException) {
+//                    Log.i("Login ERR", e.toString())
+//                }
+//            })
+        }}
     }
 
     private fun validateInput(): Boolean {

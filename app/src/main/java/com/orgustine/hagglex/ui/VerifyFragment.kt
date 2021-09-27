@@ -24,21 +24,30 @@ class VerifyFragment : Fragment(R.layout.fragment_verify) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentVerifyBinding.bind(view)
 
-        binding.loginBtn.setOnClickListener {
-            findNavController().navigate(R.id.successFragment)
-            if (!validateInput()) {
+        binding.tb.setOnClickListener {
+            findNavController().popBackStack()
+        }
 
-                val userInput = Input.fromNullable(
-                    VerifyUserInput(
-                        binding.codeEt.text.toString().trim().toInt()
-                    )
+        binding.loginBtn.setOnClickListener {
+            if (!validateInput()) findNavController().navigate(R.id.successFragment)
+            //verify()
+        }
+    }
+
+    fun verify() {
+        if (!validateInput()) {
+
+            val userInput = Input.fromNullable(
+                VerifyUserInput(
+                    binding.codeEt.text.toString().trim().toInt()
                 )
-                Apollo.apolloClient(requireContext()).mutate(VerifyMutation(data = userInput)).enqueue(object :
+            )
+            Apollo.apolloClient(requireContext()).mutate(VerifyMutation(data = userInput))
+                .enqueue(object :
                     ApolloCall.Callback<VerifyMutation.Data>() {
                     override fun onResponse(response: Response<VerifyMutation.Data>) {
                         Log.i("Ver Resp", response.toString())
-                        response.data!!.verifyUser!!.user.username
-                        AuthStore.setToken(requireContext(), response.data!!.verifyUser!!.token)
+                        //AuthStore.setToken(requireContext(), response.data!!.verifyUser!!.token)
                         findNavController().navigate(R.id.successFragment)
                         findNavController().popBackStack()
                     }
@@ -47,7 +56,6 @@ class VerifyFragment : Fragment(R.layout.fragment_verify) {
                         Log.i("Ver ERR", e.toString())
                     }
                 })
-            }
         }
     }
 
